@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Wing Works</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* タイトルをリッチに */
+        h1 { 
+            font-size: 2.5rem;
+            color: #d63031; /* 赤羽をイメージした深みのある赤 */
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            color: #636e72;
+            margin-bottom: 40px;
+            font-size: 1rem;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* スマホでは自動で縦に並びます */
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .card {
+            text-decoration: none;
+            color: inherit;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            width: 320px;
+            /* スマホで横幅が足りない時は画面幅に合わせる */
+            max-width: 100%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: block;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            background-color: #000;
+        }
+
+        .title-img, .ingame-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease;
+        }
+
+        .ingame-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .card:hover .ingame-img {
+            opacity: 1;
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.4rem;
+            color: #2d3436;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: #636e72;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* スマホ向けの微調整 */
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            body { padding: 20px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>RUBY WING WORKS</h1>
+    <div class="subtitle">GAME PORTFOLIO</div>
+
+    <div class="container">
+        <a href="https://ruby-wing-works.github.io/hamburgerpark/" class="card" target="_blank">
+            <div class="image-container">
+                <img src="hamburger_title.png" alt="タイトル" class="title-img">
+                <img src="hamburger_ingame.png" alt="インゲーム" class="ingame-img">
+            </div>
+            <div class="card-content">
+                <h2>HAMBURGER PARK</h2>
+                <p class="description">具材を引っ張って弾け！<br>3つ繋げて飲食物を消そう。</p>
+            </div>
+        </a>
+
+        <a href="https://ruby-wing-works.github.io/flying-chicken/" class="card" target="_blank">
+            <div class="image-container">
+                <img src="flying_chicken_title.png" alt="タイトル" class="title-img">
+                <img src="flying_chicken_ingame.png" alt="インゲーム" class="ingame-img">
+            </div>
+            <div class="card-content">
+                <h2>Flying Chicken</h2>
+                <p class="description">空飛ぶチキンを狙い撃て！<br>ハイスコアを目指す爽快射撃ゲーム。</p>
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>
